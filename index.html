@@ -1,1 +1,442 @@
-Selamat datang di website fellysiagian
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelas Bu Felly Siagian</title>
+</head>
+<body>
+  <h1>Selamat datang!</h1>
+  <p>Website kelas Matematika.</p>
+</body> 
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematika Kelas 7 - Konsep Rasio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .option-card:hover:not(.selected):not(.disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-color: #6366f1;
+        }
+        
+        .option-card.selected {
+            background-color: #e0e7ff;
+            border-color: #4f46e5;
+            color: #3730a3;
+        }
+
+        .option-card.disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+
+        .option-card.correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+            color: #166534;
+        }
+
+        .option-card.wrong {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+            color: #991b1b;
+        }
+
+        /* Modal Animation */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 300ms, transform 300ms;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">📐</span>
+                    <span class="font-bold text-xl text-indigo-600">Math7</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#materi" class="text-slate-600 hover:text-indigo-600 font-medium transition">Materi</a>
+                    <a href="#kuis" class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium hover:bg-indigo-700 transition shadow-sm">Mulai Kuis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-center py-16 px-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Memahami Konsep Rasio</h1>
+        <p class="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto">Pelajari cara membandingkan nilai dalam matematika dengan mudah dan menyenangkan. Siap untuk belajar materi Kelas VII hari ini?</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+        
+        <!-- MATERI SECTION -->
+        <section id="materi" class="space-y-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-800 inline-block relative">
+                    Buku Pintar: Rasio
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 rounded-full transform translate-y-2"></span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pengertian -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl mr-3">💡</div>
+                        <h3 class="text-xl font-bold">Apa itu Rasio?</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong>Rasio</strong> adalah cara membandingkan dua besaran atau lebih. Besaran yang dibandingkan harus memiliki satuan yang sama. Rasio membantu kita memahami hubungan kuantitas antara satu hal dengan hal lainnya.
+                    </p>
+                </div>
+
+                <!-- Penulisan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl mr-3">✍️</div>
+                        <h3 class="text-xl font-bold">Cara Penulisan</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-2">Jika kita membandingkan nilai <strong>A</strong> dan <strong>B</strong>, rasio dapat ditulis dalam 3 cara:</p>
+                    <ul class="list-disc list-inside text-slate-700 font-medium bg-slate-50 p-3 rounded-lg">
+                        <li>Menggunakan titik dua ( : ) ➔ <strong>A : B</strong></li>
+                        <li>Dalam bentuk pecahan ➔ <strong>A / B</strong></li>
+                        <li>Menggunakan kata-kata ➔ <strong>A berbanding B</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Menyederhanakan -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-xl mr-3">✂️</div>
+                        <h3 class="text-xl font-bold">Menyederhanakan Rasio</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Sama seperti pecahan, rasio harus ditulis dalam bentuk paling sederhana. Caranya dengan membagi kedua bilangan dengan <strong>Faktor Persekutuan Terbesar (FPB)</strong>.
+                    </p>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl">
+                        <p class="font-semibold text-indigo-900 mb-2">Contoh:</p>
+                        <p class="text-indigo-800">Berapa bentuk sederhana dari rasio <strong>15 : 20</strong>?</p>
+                        <ul class="mt-2 text-indigo-700 text-sm space-y-1">
+                            <li>1. Cari FPB dari 15 dan 20. FPB-nya adalah <strong>5</strong>.</li>
+                            <li>2. Bagi kedua angka dengan 5.</li>
+                            <li>3. 15 ÷ 5 = <strong>3</strong>, dan 20 ÷ 5 = <strong>4</strong>.</li>
+                            <li>4. Jadi, bentuk sederhananya adalah <strong class="bg-white px-2 py-1 rounded shadow-sm mx-1">3 : 4</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contoh Nyata -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 md:col-span-2 text-center">
+                    <h3 class="text-xl font-bold mb-6">Penerapan Rasio di Dunia Nyata 🌍</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-4 bg-rose-50 rounded-xl">
+                            <span class="text-3xl block mb-2">🍰</span>
+                            <h4 class="font-bold text-rose-900">Resep Masakan</h4>
+                            <p class="text-sm text-rose-700 mt-1">"Campurkan 2 gelas tepung untuk setiap 1 gelas gula (Rasio 2:1)"</p>
+                        </div>
+                        <div class="p-4 bg-teal-50 rounded-xl">
+                            <span class="text-3xl block mb-2">🗺️</span>
+                            <h4 class="font-bold text-teal-900">Skala Peta</h4>
+                            <p class="text-sm text-teal-700 mt-1">"Skala 1 : 100.000 (1 cm di peta = 100.000 cm di dunia nyata)"</p>
+                        </div>
+                        <div class="p-4 bg-sky-50 rounded-xl">
+                            <span class="text-3xl block mb-2">🚗</span>
+                            <h4 class="font-bold text-sky-900">Kecepatan</h4>
+                            <p class="text-sm text-sky-700 mt-1">"Jarak yang ditempuh per satuan waktu (km/jam)"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KUIS SECTION -->
+        <section id="kuis" class="pt-10">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <div class="bg-indigo-600 p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold mb-2">Uji Pemahamanmu! 🚀</h2>
+                    <p class="text-indigo-100">Pilih jawaban yang paling tepat dari 5 pertanyaan di bawah ini.</p>
+                </div>
+                
+                <div class="p-6 md:p-10" id="quiz-container">
+                    <!-- Pertanyaan akan di-render oleh JavaScript -->
+                </div>
+
+                <div class="bg-slate-50 p-6 border-t border-slate-200 text-center" id="quiz-footer">
+                    <button onclick="submitQuiz()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                        Cek Nilai Saya!
+                    </button>
+                    <p id="error-message" class="text-red-500 font-medium mt-3 hidden">Harap jawab semua pertanyaan terlebih dahulu!</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-12">
+        <p>© 2026 Aplikasi Matematika Interaktif SMP Kelas VII. Dibuat untuk tujuan edukasi.</p>
+    </footer>
+
+    <!-- Result Modal (Hidden by default) -->
+    <div id="resultModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-white rounded-3xl shadow-2xl z-10 w-[90%] max-w-md p-8 text-center transform transition-all modal-enter-active">
+            <div id="modal-emoji" class="text-6xl mb-4">🏆</div>
+            <h2 class="text-3xl font-bold text-slate-800 mb-2">Skor Kamu</h2>
+            <div class="text-5xl font-extrabold text-indigo-600 mb-4" id="final-score">100</div>
+            <p id="modal-message" class="text-lg text-slate-600 mb-8">Luar biasa! Kamu sudah menguasai konsep rasio.</p>
+            
+            <button onclick="closeModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-xl transition">
+                Tutup & Lihat Pembahasan
+            </button>
+            <button onclick="resetQuiz()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition mt-3">
+                Coba Ulangi Kuis
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Script -->
+    <script>
+        // Data Kuis
+        const quizData = [
+            {
+                question: "Di dalam kelas terdapat 15 siswa laki-laki dan 20 siswa perempuan. Berapakah rasio siswa laki-laki terhadap siswa perempuan?",
+                options: ["3 : 4", "4 : 3", "15 : 35", "3 : 7"],
+                correctAnswer: 0,
+                explanation: "Rasio laki-laki : perempuan = 15 : 20. Keduanya dibagi 5 (FPB), menjadi 3 : 4."
+            },
+            {
+                question: "Bentuk paling sederhana dari rasio 24 : 36 adalah...",
+                options: ["4 : 6", "6 : 9", "2 : 3", "3 : 4"],
+                correctAnswer: 2,
+                explanation: "FPB dari 24 dan 36 adalah 12. Maka 24÷12 = 2, dan 36÷12 = 3. Hasilnya 2 : 3."
+            },
+            {
+                question: "Jarak rumah Andi ke sekolah adalah 2 km, sedangkan jarak rumah Budi 500 m. Rasio jarak rumah Andi dan Budi adalah...",
+                options: ["2 : 5", "1 : 4", "20 : 5", "4 : 1"],
+                correctAnswer: 3,
+                explanation: "Samakan satuan! 2 km = 2000 m. Rasio Andi : Budi = 2000 : 500 = 4 : 1."
+            },
+            {
+                question: "Harga 3 buku tulis adalah Rp15.000. Rasio jumlah buku terhadap harga buku tersebut adalah...",
+                options: ["1 : 5.000", "5.000 : 1", "3 : 5.000", "15.000 : 3"],
+                correctAnswer: 0,
+                explanation: "Rasio jumlah : harga = 3 : 15.000. Disederhanakan (dibagi 3) menjadi 1 : 5.000."
+            },
+            {
+                question: "Dalam resep minuman, rasio sirup dan air adalah 2 : 5. Jika digunakan 4 gelas sirup, berapa gelas air yang dibutuhkan?",
+                options: ["7 gelas", "10 gelas", "12 gelas", "15 gelas"],
+                correctAnswer: 1,
+                explanation: "Rasio 2 : 5. Jika bagian sirup (2) dikali 2 menjadi 4, maka bagian air (5) juga dikali 2 menjadi 10."
+            }
+        ];
+
+        let userAnswers = new Array(quizData.length).fill(null);
+        let quizSubmitted = false;
+
+        // Render Kuis
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            quizData.forEach((q, qIndex) => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'mb-10 last:mb-0';
+                
+                // Judul pertanyaan
+                const questionTitle = document.createElement('h3');
+                questionTitle.className = 'text-lg font-bold text-slate-800 mb-4';
+                questionTitle.innerHTML = `<span class="bg-indigo-100 text-indigo-700 w-8 h-8 inline-flex items-center justify-center rounded-full mr-2">${qIndex + 1}</span> ${q.question}`;
+                qDiv.appendChild(questionTitle);
+
+                // Grid opsi
+                const optionsGrid = document.createElement('div');
+                optionsGrid.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 pl-0 sm:pl-10';
+
+                q.options.forEach((opt, optIndex) => {
+                    const optBtn = document.createElement('div');
+                    optBtn.className = 'option-card cursor-pointer border-2 border-slate-200 rounded-xl p-4 font-medium text-slate-700 bg-white flex items-center';
+                    optBtn.id = `q${qIndex}-opt${optIndex}`;
+                    optBtn.innerHTML = `
+                        <div class="w-6 h-6 border-2 border-slate-300 rounded-full mr-3 flex items-center justify-center radio-indicator transition-colors">
+                            <div class="w-3 h-3 bg-transparent rounded-full inner-dot transition-colors"></div>
+                        </div>
+                        ${opt}
+                    `;
+                    
+                    // Event listener untuk memilih jawaban
+                    optBtn.onclick = () => selectOption(qIndex, optIndex);
+                    
+                    optionsGrid.appendChild(optBtn);
+                });
+
+                qDiv.appendChild(optionsGrid);
+
+                // Tempat penjelasan (disembunyikan secara default)
+                const explanationDiv = document.createElement('div');
+                explanationDiv.id = `explanation-${qIndex}`;
+                explanationDiv.className = 'mt-4 pl-0 sm:pl-10 text-sm hidden';
+                qDiv.appendChild(explanationDiv);
+
+                container.appendChild(qDiv);
+            });
+        }
+
+        // Fungsi saat memilih opsi
+        function selectOption(qIndex, optIndex) {
+            if (quizSubmitted) return; // Jangan izinkan ganti jawaban setelah submit
+
+            userAnswers[qIndex] = optIndex;
+            
+            // Reset style untuk pertanyaan ini
+            const options = document.querySelectorAll(`[id^='q${qIndex}-opt']`);
+            options.forEach((opt, idx) => {
+                opt.classList.remove('selected', 'border-indigo-600', 'bg-indigo-50');
+                const dot = opt.querySelector('.inner-dot');
+                const ring = opt.querySelector('.radio-indicator');
+                dot.classList.remove('bg-indigo-600');
+                ring.classList.remove('border-indigo-600');
+                
+                if (idx === optIndex) {
+                    opt.classList.add('selected', 'border-indigo-600', 'bg-indigo-50');
+                    dot.classList.add('bg-indigo-600');
+                    ring.classList.add('border-indigo-600');
+                }
+            });
+
+            document.getElementById('error-message').classList.add('hidden');
+        }
+
+        // Submit Kuis
+        function submitQuiz() {
+            if (quizSubmitted) return;
+
+            // Cek apakah semua sudah dijawab
+            if (userAnswers.includes(null)) {
+                document.getElementById('error-message').classList.remove('hidden');
+                return;
+            }
+
+            quizSubmitted = true;
+            let score = 0;
+
+            // Evaluasi jawaban
+            quizData.forEach((q, qIndex) => {
+                const userAns = userAnswers[qIndex];
+                const isCorrect = userAns === q.correctAnswer;
+                
+                if (isCorrect) score += 20;
+
+                // Update UI untuk menunjukkan benar/salah
+                const options = document.querySelectorAll(`[id^='q${qIndex}-opt']`);
+                options.forEach((opt, idx) => {
+                    opt.classList.add('disabled');
+                    opt.classList.remove('selected', 'border-indigo-600', 'bg-indigo-50'); // clear selection styles
+                    
+                    if (idx === q.correctAnswer) {
+                        // Jawaban benar diberi warna hijau
+                        opt.classList.add('correct');
+                    } else if (idx === userAns && !isCorrect) {
+                        // Jawaban user yang salah diberi warna merah
+                        opt.classList.add('wrong');
+                    }
+                });
+
+                // Tampilkan Penjelasan
+                const expDiv = document.getElementById(`explanation-${qIndex}`);
+                expDiv.classList.remove('hidden');
+                if (isCorrect) {
+                    expDiv.innerHTML = `<div class="p-3 bg-green-50 text-green-800 rounded-lg border border-green-200"><strong>✅ Benar!</strong> ${q.explanation}</div>`;
+                } else {
+                    expDiv.innerHTML = `<div class="p-3 bg-red-50 text-red-800 rounded-lg border border-red-200"><strong>❌ Salah.</strong> ${q.explanation}</div>`;
+                }
+            });
+
+            // Ubah tombol di footer
+            document.getElementById('quiz-footer').style.display = 'none';
+
+            // Tampilkan Modal Skor
+            showModal(score);
+        }
+
+        function showModal(score) {
+            const modal = document.getElementById('resultModal');
+            const scoreEl = document.getElementById('final-score');
+            const msgEl = document.getElementById('modal-message');
+            const emojiEl = document.getElementById('modal-emoji');
+
+            scoreEl.innerText = score;
+
+            if (score === 100) {
+                emojiEl.innerText = '🏆';
+                msgEl.innerText = 'Sempurna! Kamu sangat menguasai konsep rasio!';
+                scoreEl.className = 'text-5xl font-extrabold text-green-500 mb-4';
+            } else if (score >= 80) {
+                emojiEl.innerText = '🌟';
+                msgEl.innerText = 'Bagus sekali! Pemahamanmu sudah sangat baik.';
+                scoreEl.className = 'text-5xl font-extrabold text-blue-500 mb-4';
+            } else if (score >= 60) {
+                emojiEl.innerText = '👍';
+                msgEl.innerText = 'Cukup baik. Yuk pelajari lagi materinya sedikit agar lebih paham.';
+                scoreEl.className = 'text-5xl font-extrabold text-amber-500 mb-4';
+            } else {
+                emojiEl.innerText = '💪';
+                msgEl.innerText = 'Jangan menyerah! Baca kembali materi di atas dan coba lagi ya.';
+                scoreEl.className = 'text-5xl font-extrabold text-red-500 mb-4';
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('resultModal').classList.add('hidden');
+        }
+
+        function resetQuiz() {
+            closeModal();
+            userAnswers = new Array(quizData.length).fill(null);
+            quizSubmitted = false;
+            document.getElementById('quiz-footer').style.display = 'block';
+            renderQuiz();
+            
+            // Scroll sedikit ke area kuis agar fokus
+            document.getElementById('kuis').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Inisialisasi Kuis saat halaman dimuat
+        window.onload = function() {
+            renderQuiz();
+        };
+    </script>
+</body>
+</html>
+</html>
